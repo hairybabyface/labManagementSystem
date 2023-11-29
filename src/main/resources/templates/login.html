@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<style>
+    .banner {
+        background: black;
+        text-align: center;
+        color: white;
+    }
+    .container {
+        height: 400px;
+        position: relative;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .login_button{
+        margin-left: 80px;
+    }
+    .password_input{
+        margin-left: 4px;
+    }
+</style>
+</style>
+<head> 
+    <title>login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="banner">
+        <span>
+            Lab Management System
+        </span>
+    </div> 
+    <div class="container">
+        <div class="center">
+            <form action="C:\Users\avbla\mySpringProjects\LabManagementSystem\src\main\resources\templates\register_success.html" 
+                th:action="@{/greeting}" th:object="${greeting}" method="post">
+                <p>Username: <input type="text" th:field="*{username}" /></p>
+                <p>Password: <input type="text" class="password_input" th:field="*{password}" /></p>
+                <button class="login_button">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
