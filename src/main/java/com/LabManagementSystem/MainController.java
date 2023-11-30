@@ -6,11 +6,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import java.util.logging.Logger;
 
 @Controller
 public class MainController {
 
     private UserService userService;
+    private static final Logger LOGGER = Logger.getLogger(LabManagementSystemApplication.class.getName());
 
     public MainController(UserService userService) {
         
@@ -28,6 +30,8 @@ public class MainController {
     public String registration(@ModelAttribute("user") UserDto userDto,
                                BindingResult result,
                                Model model){
+
+        LOGGER.info("MainController - registration"); // debug
 
         if(result.hasErrors()){
             model.addAttribute("user", userDto);
