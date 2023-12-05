@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
-
 <style>
     .banner {
         background: black;
@@ -11,7 +10,6 @@
         height: 400px;
         position: relative;
     }
-
     .center {
         margin: 0;
         position: absolute;
@@ -20,11 +18,14 @@
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
-    .login_button{
-        margin-left: 80px;
-    }
-    .password_input{
-        margin-left: 4px;
+    a:link{
+        background-color: #c3b8b850;
+        color: rgb(5, 5, 5);
+        border-top-color: black;
+        padding: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
     }
 </style>
 </style>
@@ -40,11 +41,10 @@
     </div> 
     <div class="container">
         <div class="center">
-            <form action="C:\Users\avbla\mySpringProjects\LabManagementSystem\src\main\resources\templates\register_success.html" 
-                th:action="@{/greeting}" th:object="${greeting}" method="post">
-                <p>Username: <input type="text" th:field="*{username}" /></p>
-                <p>Password: <input type="text" class="password_input" th:field="*{password}" /></p>
-                <button class="login_button">Login</button>
+            <form>
+                <p>Username: <input type="text"/></p>
+                <p>Password: <input type="text"/></p>
+                <a href="/home">Log in</a>
             </form>
         </div>
     </div>

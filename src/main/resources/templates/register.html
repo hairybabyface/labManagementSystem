@@ -32,6 +32,15 @@
     .password_input{
         margin-left: 10px;
     }
+    a:link{
+        background-color: #c3b8b850;
+        color: rgb(5, 5, 5);
+        border-top-color: black;
+        padding: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
 </style>
 </style>
 <head> 
@@ -46,13 +55,12 @@
     </div> 
     <div class="container">
         <div class="center">
-            <form action="C:\Users\avbla\mySpringProjects\LabManagementSystem\src\main\resources\templates\register_success.html" 
-                th:action="@{/greeting}" th:object="${greeting}" method="post">
-                <p>First Name: <input type="text" th:field="*{firstName}" /></p>
-                <p>Last Name: <input type="text" class="lastName_input" th:field="*{lastName}" /></p>
-                <p>Email: <input type="text" class="email_input" th:field="*{email}" /></p>
-                <p>Password: <input type="text" class="password_input" th:field="*{password}" /></p>
-                <button class="register_button">Register</button>
+            <form>
+                <p>First Name: <input type="text"/></p>
+                <p>Last Name: <input type="text" class="lastName_input"/></p>
+                <p>Email: <input type="text" class="email_input"/></p>
+                <p>Password: <input type="text" class="password_input"/></p>
+                <a href="/home">Register</a>
             </form>
         </div>
     </div>
