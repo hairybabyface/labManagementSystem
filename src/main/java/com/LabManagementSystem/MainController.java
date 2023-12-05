@@ -11,10 +11,20 @@ public class MainController {
     public String getLoginHTML(){
         return "login";
     } 
+
+    @GetMapping("/login_success")
+    public String getLoginSuccessHTML(){
+        return "login_success";
+    } 
     
     @GetMapping("/register")
     public String getRegisterHTML(){
         return "register";
+    } 
+
+    @GetMapping("/register_success")
+    public String getRegisterSuccessHTML(){
+        return "register_success";
     } 
 
     @GetMapping("/home")
