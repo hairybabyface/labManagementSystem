@@ -2,24 +2,28 @@ package com.LabManagementSystem;
 
 public class UserDto
 {
-    private Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
+    public UserDto()
+    {
+        
+    }
+
+    // Constructor
+    public UserDto(String firstName, String lastName, String email, String password) {
+		
+        super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+	}
+
     // Getter and Setter methods start here
-    // id
-    public void setID(long id)
-    {
-        this.id = id;
-    }
-
-    public long getId()
-    {
-        return id;
-    }
-
+    // ...
     // firstName
     public void setFirstName(String firstName)
     {

@@ -10,17 +10,26 @@ public class User
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false)
+    @Column(name = "firstName")
     private String firstName;
 
-    @Column(nullable=false)
+    @Column(name = "lastName")
     private String lastName;
 
-    @Column(nullable=false, unique=true)
+    @Column(name = "email")
     private String email;
 
-    @Column(nullable=false)
+    @Column(name = "password")
     private String password;
+
+    // Constructor
+    public User(String firstName, String lastName, String email, String password) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+	}
 
     // Getter and Setter methods start here
     // id

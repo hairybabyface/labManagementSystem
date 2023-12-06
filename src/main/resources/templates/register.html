@@ -13,11 +13,11 @@
     </div> 
     <div class="container">
         <div class="center">
-            <form>
-                <p>First Name: <input type="text"/></p>
-                <p>Last Name: <input type="text" class="lastName_input"/></p>
-                <p>Email: <input type="text" class="email_input"/></p>
-                <p>Password: <input type="text" class="password_input"/></p>
+            <form th:action="@{/register_POST}" method="post" th:object="${user}">
+                <p>First Name: <input type="text" th:field="*{firstName}"/></p>
+                <p>Last Name: <input type="text" class="lastName_input" th:field="*{lastName}"/></p>
+                <p>Email: <input type="text" class="email_input" th:field="*{email}"/></p>
+                <p>Password: <input type="text" class="password_input" th:field="*{password}"/></p>
                 <a href="/register_success">Register</a>
             </form>
         </div>
