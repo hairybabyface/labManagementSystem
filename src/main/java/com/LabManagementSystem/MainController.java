@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     // handlers for GET requests
+    @GetMapping("/index")
+    public String getIndexHTML(){
+        return "index";
+    } 
+
     @GetMapping("/login")
     public String getLoginHTML(){
         return "login";

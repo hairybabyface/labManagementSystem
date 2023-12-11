@@ -22,7 +22,8 @@ public class EquipmentController {
 		List<Equipment> listProducts = service.listAll();
 		model.addAttribute("listProducts", listProducts);
 		
-		return "index";
+		//return "index";
+		return "home";
 	}
 	
 	@RequestMapping("/new")
@@ -37,8 +38,8 @@ public class EquipmentController {
 	public String saveProduct(@ModelAttribute("product") Equipment product) {
 		service.save(product);
 		
-		//return "redirect:/";
-		return "home";
+		return "redirect:/";
+		
 	}
 	
 	@RequestMapping("/edit/{id}")
