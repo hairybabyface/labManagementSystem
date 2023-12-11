@@ -2,19 +2,40 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
     <title>home</title>
-    <link href="Stylesheet.css" rel="stylesheet">
+    <!-- <link href="Stylesheet.css" rel="stylesheet"> -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <div class="banner">
-        <span>
-            Lab Management System
-        </span>
-    </div> 
-    <div class="container">
-        <div class="center">
-            This is the home page
-        </div>
-    </div>
-</body>
-</html>
+    <div align="center">
+        <h1>Equipment List</h1>
+        <a href="new">Add Equipment</a>
+        <br/><br/>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Made In</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${listProducts}">
+                    <td th:text="${product.id}">ID</td>
+                    <td th:text="${product.name}">Name</td>
+                    <td th:text="${product.brand}">Brand</td>
+                    <td th:text="${product.madein}">Made in</td>
+                    <td th:text="${product.price}">Price</td>
+                    <td>
+                        <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+    </body>
+    </html>
