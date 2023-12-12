@@ -2,10 +2,15 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
     <title>home</title>
-    <!-- <link href="Stylesheet.css" rel="stylesheet"> -->
+    <link href="Stylesheet.css" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <div class="banner">
+        <span>
+            Lab Management System
+        </span>
+    </div> 
     <div align="center">
         <h1>Equipment List</h1>
         <a href="new">Add Equipment</a>
@@ -22,16 +27,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="product : ${listProducts}">
-                    <td th:text="${product.id}">ID</td>
-                    <td th:text="${product.name}">Name</td>
-                    <td th:text="${product.brand}">Brand</td>
-                    <td th:text="${product.madein}">Made in</td>
-                    <td th:text="${product.price}">Price</td>
+                <tr th:each="equipment : ${listEquipment}">
+                    <td th:text="${equipment.id}">ID</td>
+                    <td th:text="${equipment.name}">Name</td>
+                    <td th:text="${equipment.brand}">Brand</td>
+                    <td th:text="${equipment.madein}">Made in</td>
+                    <td th:text="${equipment.price}">Price</td>
                     <td>
-                        <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                        <a th:href="@{'/edit/' + ${equipment.id}}">Edit</a>
                         &nbsp;&nbsp;&nbsp;
-                        <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                        <a th:href="@{'/delete/' + ${equipment.id}}">Delete</a>
                     </td>
                 </tr>
             </tbody>

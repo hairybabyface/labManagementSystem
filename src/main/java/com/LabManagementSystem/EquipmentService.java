@@ -17,8 +17,8 @@ public class EquipmentService {
 		return repo.findAll();
 	}
 	
-	public void save(Equipment product) {
-		repo.save(product);
+	public void save(Equipment equipment) {
+		repo.save(equipment);
 	}
 	
 	public Equipment get(long id) {
