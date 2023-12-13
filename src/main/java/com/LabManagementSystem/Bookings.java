@@ -1,15 +1,12 @@
 package com.LabManagementSystem;
 
-import java.sql.Date;
-import java.sql.Time;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Booking {
+public class Bookings {
 	private Long id;
 	private String name;
     private String equipment;
@@ -17,10 +14,10 @@ public class Booking {
 	private String time;
 	private String duration;
 
-	protected Booking() {
+	protected Bookings() {
 	}
 
-	protected Booking(Long id, String name, String equipment, String date, String time, String duration) {
+	protected Bookings(Long id, String name, String equipment, String date, String time, String duration) {
 		super();
 		this.id = id;
 		this.name = name;

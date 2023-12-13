@@ -2,6 +2,6 @@ package com.LabManagementSystem;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookingRepository extends JpaRepository<Booking, Long> {
+public interface BookingsRepository extends JpaRepository<Bookings, Long> {
 
 }

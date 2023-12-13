@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -17,6 +16,9 @@ public class MainController {
 
     @Autowired
 	private EquipmentService service; 
+
+	@Autowired
+	private BookingsService bookingsService;
 
     // handlers for GET requests
     @GetMapping("/index")
@@ -52,18 +54,18 @@ public class MainController {
 		return "home";
 	}
 	
-	@RequestMapping("/new")
-	public String showNewEquipmentPage(Model model) {
-		Equipment equipment = new Equipment();
-		model.addAttribute("equipment", equipment);
+	@RequestMapping("/book")
+	public String showBookEquipmentPage(Model model) {
+		Bookings booking = new Bookings();
+		model.addAttribute("booking", booking);
 		
-		return "new_equipment";
+		return "new_booking";
 	}
 	
 	@RequestMapping(value = "/book_equipment", method = RequestMethod.POST)
-	public String bookEquipment(@ModelAttribute("equipment") Equipment equipment) {
+	public String bookEquipment(@ModelAttribute("booking") Bookings booking) {
 		
-		//service.save(equipment);
+		bookingsService.save(booking);
 		
         //return "redirect:/home";
 		return "booking_success";

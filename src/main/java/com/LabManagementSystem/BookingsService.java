@@ -8,20 +8,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class BookingService {
+public class BookingsService {
 
 	@Autowired
-	private BookingRepository repo;
+	private BookingsRepository repo;
 	
-	public List<Booking> listAll() {
+	public List<Bookings> listAll() {
 		return repo.findAll();
 	}
 	
-	public void save(Booking booking) {
+	public void save(Bookings booking) {
 		repo.save(booking);
 	}
 	
-	public Booking get(long id) {
+	public Bookings get(long id) {
 		return repo.findById(id).get();
 	}
 }
