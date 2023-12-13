@@ -34,9 +34,7 @@
                     <td th:text="${equipment.madein}">Made in</td>
                     <td th:text="${equipment.price}">Price</td>
                     <td>
-                        <a th:href="@{'/edit/' + ${equipment.id}}">Edit</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a th:href="@{'/delete/' + ${equipment.id}}">Delete</a>
+                        <a th:href="@{'/book/' + ${equipment.id}}">Book</a>
                     </td>
                 </tr>
             </tbody>

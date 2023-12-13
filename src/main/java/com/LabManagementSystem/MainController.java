@@ -60,28 +60,22 @@ public class MainController {
 		return "new_equipment";
 	}
 	
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveEquipment(@ModelAttribute("equipment") Equipment equipment) {
-		service.save(equipment);
+	@RequestMapping(value = "/book_equipment", method = RequestMethod.POST)
+	public String bookEquipment(@ModelAttribute("equipment") Equipment equipment) {
 		
-        return "redirect:/home";
+		//service.save(equipment);
+		
+        //return "redirect:/home";
+		return "booking_success";
 	}
 	
-	@RequestMapping("/edit/{id}")
-	public ModelAndView showEditEquipmentPage(@PathVariable(name = "id") int id) {
+	@RequestMapping("/book/{id}")
+	public ModelAndView showBookEquipmentPage(@PathVariable(name = "id") int id) {
 		
-		ModelAndView mav = new ModelAndView("edit_equipment");
+		ModelAndView mav = new ModelAndView("book_equipment");
 		Equipment equipment = service.get(id);
 		mav.addObject("equipment", equipment);
 		
 		return mav;
-	}
-	
-	@RequestMapping("/delete/{id}")
-	public String deleteEquipment(@PathVariable(name = "id") int id) {
-		
-        service.delete(id);
-
-		return "redirect:/home";		
 	}
 }

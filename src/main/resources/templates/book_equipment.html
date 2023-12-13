@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Book Equipment</title>
+	<link href="Stylesheet.css" rel="stylesheet">
+</head>
+<body>
+	<div class="banner">
+        <span>
+            Lab Management System
+        </span>
+    </div> 
+	<div align="center">
+		<h1>Book Equipment</h1>
+		<br />
+		<!-- <form action="#" th:object="${equipment}" method="post"> -->
+		<form th:object="${equipment}">
+
+			<table border="1" cellpadding="10">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Brand</th>
+						<th>Made In</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td th:text="*{id}">ID</td>
+						<td th:text="*{name}">Name</td>
+						<td th:text="*{brand}">Brand</td>
+						<td th:text="*{madein}">Made in</td>
+						<td th:text="*{price}">Price</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<p></p>
+		
+			<!-- <table border="0" cellpadding="10">
+				<tr>				
+					<td>Full Name:</td>
+					<td>
+						<input type="text" th:field="*{id}" readonly="readonly" />
+					</td>
+				</tr>			
+				<tr>				
+					<td>Name:</td>
+					<td>
+						<input type="text" th:field="*{name}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Brand:</td>
+					<td><input type="text" th:field="*{brand}" /></td>
+				</tr>
+				<tr>
+					<td>Made In:</td>
+					<td><input type="text" th:field="*{madein}" /></td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="text" th:field="*{price}" /></td>
+				</tr>								
+			</table>
+			<div class="container">
+				<div class="center">
+					<button type="submit">Book Equipment</button>
+					<button type="submit">Back</button>
+				</div>
+			</div> -->
+	</div>
+</body>
+</html>
