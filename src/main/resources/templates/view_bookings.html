@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Bookings</title>
+	<link href="Stylesheet.css" rel="stylesheet">
+</head>
+<body>
+	<div class="banner">
+        <span>
+            Lab Management System
+        </span>
+    </div> 
+	<div align="center">
+		<h1>Bookings</h1>
+		<br />
+		<table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Equipment</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="booking : ${listBookings}">
+                    <td th:text="${booking.name}">Name</td>
+                    <td th:text="${booking.equipment}">Equipment</td>
+                    <td th:text="${booking.date}">Date</td>
+                    <td th:text="${booking.time}">Time</td>
+                    <td th:text="${booking.duration}">Duration</td>
+                </tr>
+            </tbody>
+        </table>
+		<div class="container">
+			<div class="center">
+				<button type="submit">Back</button>
+			</div>
+		</div> 
+	</div>
+</body>
+</html>

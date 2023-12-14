@@ -80,4 +80,12 @@ public class MainController {
 		
 		return mav;
 	}
+
+	@RequestMapping("/view_bookings")
+	public String viewBookingsPage(Model model) {
+		List<Bookings> listBookings = bookingsService.listAll();
+		model.addAttribute("listBookings", listBookings);
+		
+		return "view_bookings";
+	}
 }
