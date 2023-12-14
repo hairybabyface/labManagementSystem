@@ -6,27 +6,27 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Bookings {
+public class Requests {
 	
-	private Long id;
+    private Long id;
 	private String name;
     private String equipment;
-	private String date;
-	private String time;
-	private String duration;
+	private String supplier;
+	private String price;
+	private String supplierID;
 
-	protected Bookings() {
+	protected Requests() {
 	}
 
-	protected Bookings(Long id, String name, String equipment, String date, String time, String duration) {
+	protected Requests(Long id, String name, String equipment, String supplier, String price, String supplierID) {
 		
-		super();
+        super();
 		this.id = id;
 		this.name = name;
 		this.equipment = equipment;
-		this.date = date;
-		this.time = time;
-        this.duration = duration;
+		this.supplier = supplier;
+		this.price = price;
+        this.supplierID = supplierID;
 	}
 
 	@Id
@@ -55,27 +55,27 @@ public class Bookings {
 		this.equipment = equipment;
 	}
 
-	public String getDate() {
-		return date;
+	public String getSupplier() {
+		return supplier;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setSupplier(String supplier) {
+		this.supplier = supplier;
 	}
 
-	public String getTime() {
-		return time;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setTime(String time) {
-		this.time = time;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-    public String getDuration() {
-		return duration;
+    public String getSupplierID() {
+		return supplierID;
 	}
 
-	public void setDuration(String duration) {
-		this.duration = duration;
+	public void setSupplierID(String supplierID) {
+		this.supplierID = supplierID;
 	}
 }
