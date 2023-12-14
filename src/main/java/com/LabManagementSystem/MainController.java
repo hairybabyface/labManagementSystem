@@ -15,15 +15,20 @@ import com.LabManagementSystem.Bookings.Bookings;
 import com.LabManagementSystem.Bookings.BookingsService;
 import com.LabManagementSystem.Equipment.Equipment;
 import com.LabManagementSystem.Equipment.EquipmentService;
+import com.LabManagementSystem.Requests.Requests;
+import com.LabManagementSystem.Requests.RequestsService;
 
 @Controller
 public class MainController {
 
     @Autowired
-	private EquipmentService service; 
+	private EquipmentService equipmentService; 
 
 	@Autowired
 	private BookingsService bookingsService;
+
+	@Autowired
+	private RequestsService requestsService;
 
     @GetMapping("/index")
     public String getIndexHTML(){
@@ -52,7 +57,7 @@ public class MainController {
 
     @RequestMapping("/home")
 	public String viewHomePage(Model model) {
-		List<Equipment> listEquipment = service.listAll();
+		List<Equipment> listEquipment = equipmentService.listAll();
 		model.addAttribute("listEquipment", listEquipment);
 		
 		return "home";
@@ -73,16 +78,6 @@ public class MainController {
 		
 		return "booking_success";
 	}
-	
-	@RequestMapping("/book/{id}")
-	public ModelAndView showBookEquipmentPage(@PathVariable(name = "id") int id) {
-		
-		ModelAndView mav = new ModelAndView("book_equipment");
-		Equipment equipment = service.get(id);
-		mav.addObject("equipment", equipment);
-		
-		return mav;
-	}
 
 	@RequestMapping("/view_bookings")
 	public String viewBookingsPage(Model model) {
@@ -90,6 +85,15 @@ public class MainController {
 		model.addAttribute("listBookings", listBookings);
 		
 		return "view_bookings";
+	}
+
+	@RequestMapping("/request_equipment")
+	public String showRequestEquipmentPage(Model model) {
+		
+		Requests request = new Requests();
+		model.addAttribute("request", request);
+		
+		return "request_equipment";
 	}
 
 	@GetMapping("/back")

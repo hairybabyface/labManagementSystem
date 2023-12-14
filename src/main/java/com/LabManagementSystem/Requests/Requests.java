@@ -10,23 +10,18 @@ public class Requests {
 	
     private Long id;
 	private String name;
-    private String equipment;
-	private String supplier;
-	private String price;
-	private String supplierID;
+    private String description;
 
-	protected Requests() {
+	public Requests() 
+	{
 	}
 
-	protected Requests(Long id, String name, String equipment, String supplier, String price, String supplierID) {
-		
+	public Requests(Long id, String name, String description)
+	{
         super();
 		this.id = id;
 		this.name = name;
-		this.equipment = equipment;
-		this.supplier = supplier;
-		this.price = price;
-        this.supplierID = supplierID;
+		this.description = description;
 	}
 
 	@Id
@@ -47,35 +42,11 @@ public class Requests {
 		this.name = name;
 	}
 
-	public String getEquipment() {
-		return equipment;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setEquipment(String equipment) {
-		this.equipment = equipment;
-	}
-
-	public String getSupplier() {
-		return supplier;
-	}
-
-	public void setSupplier(String supplier) {
-		this.supplier = supplier;
-	}
-
-	public String getPrice() {
-		return price;
-	}
-
-	public void setPrice(String price) {
-		this.price = price;
-	}
-
-    public String getSupplierID() {
-		return supplierID;
-	}
-
-	public void setSupplierID(String supplierID) {
-		this.supplierID = supplierID;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

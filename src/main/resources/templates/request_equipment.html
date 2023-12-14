@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Request Equipment</title>
+	<link href="Stylesheet.css" rel="stylesheet">
+</head>
+<body>
+	<div class="banner">
+        <span>
+            Lab Management System
+        </span>
+    </div> 
+	<div align="center">
+		<h1>Request Equipment</h1>
+		<br />
+		<form th:object="${request}">
+            <p>Name: <input type="text" th:field="*{id}"/></p>
+            <p>Description: <input type="text" th:field="*{description}"/></p>
+		</form>
+		<p></p>
+		<div class="container">
+			<div class="center">
+				<button type="submit">Request Equipment</button>
+				<button type="submit">Back</button>
+			</div>
+		</div> 
+	</div>
+</body>
+</html>
