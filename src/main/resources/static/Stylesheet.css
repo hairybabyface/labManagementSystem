@@ -41,10 +41,13 @@ a:link{
     display: inline-block;
 }
 .link_centered {
+    color: rgb(5, 5, 5);
+    border-top-color: black;
+    padding: 4px;
     margin: 0 auto;
     text-align: center;
     align-self: center;
     text-decoration: none;
     display: block;	
-    padding: 4px;
+    
   }

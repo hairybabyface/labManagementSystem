@@ -20,7 +20,6 @@ public class MainController {
 	@Autowired
 	private BookingsService bookingsService;
 
-    // handlers for GET requests
     @GetMapping("/index")
     public String getIndexHTML(){
         return "index";
@@ -67,7 +66,6 @@ public class MainController {
 		
 		bookingsService.save(booking);
 		
-        //return "redirect:/home";
 		return "booking_success";
 	}
 	
@@ -88,4 +86,10 @@ public class MainController {
 		
 		return "view_bookings";
 	}
+
+	@GetMapping("/back")
+    public String goBack(){
+        
+		return "redirect:/home";
+    } 
 }
