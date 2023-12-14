@@ -13,8 +13,6 @@
     </div> 
     <div align="center">
         <h1>Equipment List</h1>
-        <a href="book">Book Equipment</a>
-        <br/><br/>
         <table border="1" cellpadding="10">
             <thead>
                 <tr>
@@ -23,7 +21,6 @@
                     <th>Brand</th>
                     <th>Made In</th>
                     <th>Price</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,12 +30,22 @@
                     <td th:text="${equipment.brand}">Brand</td>
                     <td th:text="${equipment.madein}">Made in</td>
                     <td th:text="${equipment.price}">Price</td>
-                    <td>
-                        <a th:href="@{'/book/' + ${equipment.id}}">Book</a>
-                    </td>
                 </tr>
             </tbody>
         </table>
-    </div>    
+    </div>
+    <br/><br/>
+    <div class="link_centered">
+        <a href="book">Book Equipment</a>
+    </div>
+    <div class="link_centered">
+        <a href="">View Bookings</a>
+    </div>
+    <div class="link_centered">
+        <a href="">Request Equipment</a>
+    </div>
+    <div class="link_centered">
+        <a href="">Log out</a>
+    </div>
     </body>
     </html>
