@@ -1,4 +1,4 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.Equipment;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.Equipment;
 
 import java.util.List;
 
@@ -8,20 +8,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class BookingsService {
+public class EquipmentService {
 
 	@Autowired
-	private BookingsRepository repo;
+	private EquipmentRepository repo;
 	
-	public List<Bookings> listAll() {
+	public List<Equipment> listAll() {
 		return repo.findAll();
 	}
 	
-	public void save(Bookings booking) {
-		repo.save(booking);
+	public void save(Equipment equipment) {
+		repo.save(equipment);
 	}
 	
-	public Bookings get(long id) {
+	public Equipment get(long id) {
 		return repo.findById(id).get();
 	}
 }

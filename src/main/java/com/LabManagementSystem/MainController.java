@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.LabManagementSystem.Bookings.Bookings;
+import com.LabManagementSystem.Bookings.BookingsService;
+import com.LabManagementSystem.Equipment.Equipment;
+import com.LabManagementSystem.Equipment.EquipmentService;
+
 @Controller
 public class MainController {
 

@@ -1,4 +1,4 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.User;
 
 public interface UserService{
     

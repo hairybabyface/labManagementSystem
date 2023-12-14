@@ -1,21 +1,30 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.User;
 
-public class UserDto
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="users")
+public class User
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
 
-    public UserDto()
-    {
-        
-    }
-
     // Constructor
-    public UserDto(String firstName, String lastName, String email, String password) {
-		
-        super();
+    public User(String firstName, String lastName, String email, String password) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -23,7 +32,17 @@ public class UserDto
 	}
 
     // Getter and Setter methods start here
-    // ...
+    // id
+    public void setID(long id)
+    {
+        this.id = id;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
+
     // firstName
     public void setFirstName(String firstName)
     {

@@ -1,4 +1,4 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.User;
 
 import org.springframework.stereotype.Service;
 

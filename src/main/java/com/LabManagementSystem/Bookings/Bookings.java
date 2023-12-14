@@ -1,4 +1,4 @@
-package com.LabManagementSystem;
+package com.LabManagementSystem.Bookings;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,10 +15,10 @@ public class Bookings {
 	private String time;
 	private String duration;
 
-	protected Bookings() {
+	public Bookings() {
 	}
 
-	protected Bookings(Long id, String name, String equipment, String date, String time, String duration) {
+	public Bookings(Long id, String name, String equipment, String date, String time, String duration) {
 		
 		super();
 		this.id = id;
