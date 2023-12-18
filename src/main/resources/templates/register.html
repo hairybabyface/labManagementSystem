@@ -13,12 +13,15 @@
     </div> 
     <div class="container">
         <div class="center">
-            <form th:action="@{/register_POST}" method="post" th:object="${user}">
+            <form action="#" th:action="@{/register_user}" method="post" th:object="${user}">
                 <p>First Name: <input type="text" th:field="*{firstName}"/></p>
                 <p>Last Name: <input type="text" class="lastName_input" th:field="*{lastName}"/></p>
                 <p>Email: <input type="text" class="email_input" th:field="*{email}"/></p>
                 <p>Password: <input type="text" class="password_input" th:field="*{password}"/></p>
-                <a href="/register_success">Register</a>
+                <button class="link_centered" type="submit">Register</button>
+                <div class="link_centered">
+                    <a href="/back">Back</a>
+                </div>
             </form>
         </div>
     </div>

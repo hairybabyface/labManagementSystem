@@ -49,13 +49,14 @@ a:link{
     align-self: center;
     text-decoration: none;
     display: block;	
-    
-  }
-  .exit_button{
-    margin-top: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+}
+.buttons_centered {
+    color: rgb(5, 5, 5);
+    border-top-color: black;
+    padding: 4px;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    display: block;	
+}

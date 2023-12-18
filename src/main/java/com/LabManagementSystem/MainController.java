@@ -18,11 +18,16 @@ import com.LabManagementSystem.Equipment.Equipment;
 import com.LabManagementSystem.Equipment.EquipmentService;
 import com.LabManagementSystem.Requests.Requests;
 import com.LabManagementSystem.Requests.RequestsService;
+import com.LabManagementSystem.User.User;
+import com.LabManagementSystem.User.UserService;
 
 @Controller
 public class MainController {
 
     @Autowired
+	private UserService userService;
+	
+	@Autowired
 	private EquipmentService equipmentService; 
 
 	@Autowired
@@ -47,9 +52,21 @@ public class MainController {
     } 
     
     @GetMapping("/register")
-    public String getRegisterHTML(){
+    public String getRegisterPage(Model model){
+
+		User user = new User();
+		model.addAttribute("user", user);
+
         return "register";
     } 
+
+	@RequestMapping(value = "/register_user", method = RequestMethod.POST)
+	public String registerUser(@ModelAttribute("user") User user) {
+		
+		userService.save(user);
+		
+		return "register_success";
+	}
 
     @GetMapping("/register_success")
     public String getRegisterSuccessHTML(){
