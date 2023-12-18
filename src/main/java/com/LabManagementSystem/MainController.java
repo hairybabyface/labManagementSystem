@@ -101,4 +101,10 @@ public class MainController {
         
 		return "redirect:/home";
     } 
+
+	@GetMapping("/logout")
+    public String showLogoutPage(){
+        
+		return "logout";
+    } 
 }
