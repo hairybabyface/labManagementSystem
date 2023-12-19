@@ -69,8 +69,15 @@ public class MainController {
 	}
 
     @GetMapping("/register_success")
-    public String getRegisterSuccessHTML(){
-        return "register_success";
+    public String showRegisterSuccessPage(){
+        
+		return "register_success";
+    } 
+
+	@GetMapping("/register_failure")
+    public String showRegisterFailurePage(){
+        
+		return "register_failure";
     } 
 
     @RequestMapping("/home")
@@ -118,6 +125,12 @@ public class MainController {
     public String goBack(){
         
 		return "redirect:/home";
+    } 
+
+	@GetMapping("/booking_failure")
+    public String showBookingFailurePage(){
+        
+		return "booking_failure";
     } 
 
 	@GetMapping("/logout")
