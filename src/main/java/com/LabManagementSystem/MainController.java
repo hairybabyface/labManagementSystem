@@ -37,7 +37,7 @@ public class MainController {
 	private RequestsService requestsService;
 
     @GetMapping("/index")
-    public String getIndexHTML(){
+    public String getIndexPage(){
         return "index";
     } 
 
