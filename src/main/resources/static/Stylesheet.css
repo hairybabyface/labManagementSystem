@@ -15,6 +15,14 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.center_marginTop {
+    margin: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 .success_message{
     margin-left: 5px;
     margin-bottom: 20px;
@@ -59,4 +67,16 @@ a:link{
     align-self: center;
     text-decoration: none;
     display: block;	
+}
+.request_name_title{
+    margin-left: 110px;
+}
+.request_name_field{
+    height: 15px;
+    width: 200px;
+}
+.equipment_description_field{
+    height: 100px;
+    width: 200px;
+    text-align: top;
 }
