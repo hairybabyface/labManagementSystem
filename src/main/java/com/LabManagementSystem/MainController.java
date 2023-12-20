@@ -121,6 +121,14 @@ public class MainController {
 		return "request_equipment";
 	}
 
+	@RequestMapping(value = "/send_request", method = RequestMethod.POST)
+	public String sendRequest(@ModelAttribute("request") Requests request) {
+		
+		requestsService.save(request);
+		
+		return "request_success";
+	}
+
 	@GetMapping("/back")
     public String goBack(){
         

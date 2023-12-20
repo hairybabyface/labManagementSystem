@@ -14,17 +14,17 @@
 	<div align="center">
 		<h1>Request Equipment</h1>
 		<br />
-		<form th:object="${request}">
+		<form action="#" th:action="@{/send_request}" th:object="${request}" method="post"></form>
 			<div class="request_name_title">
 				<p>Name: <input type="text" class="request_name_field" th:field="*{id}"/></p>
 			</div>
 			<p>Equipment Description:<textarea class="equipment_description_field" th:field="*{description}"></textarea></p>
+			<p></p>
+			<div class="center_marginTop">
+				<button type="submit">Request Equipment</button>
+				<a class="link_centered" href="/back">Back</a>
+			</div>
 		</form>
-		<p></p>
-		<div class="center_marginTop">
-			<button type="submit">Request Equipment</button>
-			<button type="submit">Back</button>
-		</div>
 	</div>
 </body>
 </html>
