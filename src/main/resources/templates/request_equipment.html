@@ -14,9 +14,9 @@
 	<div align="center">
 		<h1>Request Equipment</h1>
 		<br />
-		<form action="#" th:action="@{/send_request}" th:object="${request}" method="post"></form>
+		<form action="#" th:action="@{/send_request}" th:object="${request}" method="post">
 			<div class="request_name_title">
-				<p>Name: <input type="text" class="request_name_field" th:field="*{id}"/></p>
+				<p>Name: <input type="text" class="request_name_field" th:field="*{name}"/></p>
 			</div>
 			<p>Equipment Description:<textarea class="equipment_description_field" th:field="*{description}"></textarea></p>
 			<p></p>
